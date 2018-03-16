@@ -103,19 +103,17 @@ public class JpaMappingTest {
 		assertThat(tag.getReviews(), containsInAnyOrder(reviewNameOne, reviewNameTwo));
 	}
 
-	// @Test
-	// public void shouldReturnReviewNameImageAndDescription() {
-	// Tag tag = tagRepo.save(new Tag("Ruby"));
-	//
-	// Review underTest = new Review(null, "Review Name", "imageUrl", "Description",
-	// tag);
-	// String check = underTest.getTitle();
-	// String check2 = underTest.getImageUrl();
-	// String check3 = underTest.getDescription();
-	//
-	// assertEquals(check, "Review Name");
-	// assertEquals(check2, "imageUrl");
-	// assertEquals(check3, "Description");
-	// }
+	@Test
+	public void shouldReturnReviewNameImageAndDescription() {
+		Tag tag = tagRepo.save(new Tag("Ruby"));
 
+		Review underTest = new Review(null, "Review Name", "imageUrl", "Description", tag);
+		String check = underTest.getTitle();
+		String check2 = underTest.getImageUrl();
+		String check3 = underTest.getDescription();
+
+		assertEquals(check, "Review Name");
+		assertEquals(check2, "imageUrl");
+		assertEquals(check3, "Description");
+	}
 }
