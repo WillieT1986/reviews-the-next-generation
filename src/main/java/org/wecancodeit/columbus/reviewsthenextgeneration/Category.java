@@ -10,7 +10,7 @@ public class Category {
 	}
 
 	public long getId() {
-		return 0;
+		return id;
 	}
 
 }
