@@ -1,5 +1,7 @@
 package org.wecancodeit.columbus.reviewsthenextgeneration;
 
-public interface ReviewRepository {
+import org.springframework.data.repository.CrudRepository;
+
+public interface ReviewRepository extends CrudRepository<Review, Long> {
 
 }
