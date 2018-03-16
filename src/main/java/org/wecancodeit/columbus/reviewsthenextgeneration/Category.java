@@ -39,19 +39,19 @@ public class Category {
 		return reviews;
 	}
 
-	// @Override
-	// public int hashCode() {
-	// return ((Long) id).hashCode();
-	// }
-	//
-	// @Override
-	// public boolean equals(Object obj) {
-	// if (this == obj) {
-	// return true;
-	// }
-	// if (obj == null || getClass() != obj.getClass()) {
-	// return false;
-	// }
-	// return id == ((Category) obj).id;
-	// }
+	@Override
+	public int hashCode() {
+		return ((Long) id).hashCode();
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (obj == null || getClass() != obj.getClass()) {
+			return false;
+		}
+		return id == ((Category) obj).id;
+	}
 }
