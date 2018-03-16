@@ -44,4 +44,8 @@ public class Tag {
 		return id == ((Tag) obj).id;
 	}
 
+	public Object getReviews() {
+		return null;
+	}
+
 }
