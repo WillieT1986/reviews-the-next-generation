@@ -62,4 +62,8 @@ public class Review {
 	public Collection<Tag> getTags() {
 		return tags;
 	}
+
+	public String getImageUrl() {
+		return null;
+	}
 }

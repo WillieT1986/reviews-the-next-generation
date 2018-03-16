@@ -107,12 +107,12 @@ public class JpaMappingTest {
 	public void shouldReturnReviewNameImageAndDescription() {
 		Tag tag = tagRepo.save(new Tag("Ruby"));
 
-		Review underTest = new Review(null, "Review Name", "imageUrl", "Description", tag);
+		Review underTest = new Review(null, "Title", "imageUrl", "Description", tag);
 		String check = underTest.getTitle();
 		String check2 = underTest.getImageUrl();
 		String check3 = underTest.getDescription();
 
-		assertEquals(check, "Review Name");
+		assertEquals(check, "Title");
 		assertEquals(check2, "imageUrl");
 		assertEquals(check3, "Description");
 	}
