@@ -9,4 +9,8 @@ public class Tag {
 	public Tag(String string) {
 	}
 
+	public long getId() {
+		return 0;
+	}
+
 }
