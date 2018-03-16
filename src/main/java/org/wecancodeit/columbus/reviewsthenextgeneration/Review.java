@@ -43,6 +43,18 @@ public class Review {
 		return title;
 	}
 
+	public Collection<Tag> getTags() {
+		return tags;
+	}
+
+	public String getImageUrl() {
+		return null;
+	}
+
+	public String getDescription() {
+		return null;
+	}
+
 	@Override
 	public int hashCode() {
 		return ((Long) id).hashCode();
@@ -57,13 +69,5 @@ public class Review {
 			return false;
 		}
 		return id == ((Review) obj).id;
-	}
-
-	public Collection<Tag> getTags() {
-		return tags;
-	}
-
-	public String getImageUrl() {
-		return null;
 	}
 }
