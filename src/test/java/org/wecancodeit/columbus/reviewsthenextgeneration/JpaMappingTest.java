@@ -26,7 +26,7 @@ public class JpaMappingTest {
 
 	@Test
 	public void shouldSaveAndLoadReview() {
-		Review review = new Review(null, "Review Name", "imageUrl", "Description");
+		Review review = new Review();
 		review = reviewRepo.save(review);
 		long reviewId = review.getId();
 
