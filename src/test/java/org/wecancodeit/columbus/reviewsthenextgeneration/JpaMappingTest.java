@@ -85,27 +85,24 @@ public class JpaMappingTest {
 		assertThat(review.getTags(), containsInAnyOrder(java, ruby));
 	}
 
-	// @Test
-	// public void shouldEstablishTagToReviewsRelationship() {
-	// Tag tag = tagRepo.save(new Tag("Ruby"));
-	// long tagId = tag.getId();
-	//
-	// Review reviewNameOne = new Review(null, "reviewNameOne", "imageUrl",
-	// "Description", tag);
-	// reviewNameOne = reviewRepo.save(reviewNameOne);
-	//
-	// Review reviewNameTwo = new Review(null, "reviewNameTwo", "imageUrl",
-	// "Description", tag);
-	// reviewNameTwo = reviewRepo.save(reviewNameTwo);
-	//
-	// entityManager.flush();
-	// entityManager.clear();
-	//
-	// tag = tagRepo.findOne(tagId);
-	// assertThat(tag.getReviews(), containsInAnyOrder(reviewNameOne,
-	// reviewNameTwo));
-	// }
-	//
+	@Test
+	public void shouldEstablishTagToReviewsRelationship() {
+		Tag tag = tagRepo.save(new Tag("Ruby"));
+		long tagId = tag.getId();
+
+		Review reviewNameOne = new Review(null, "reviewNameOne", tag);
+		reviewNameOne = reviewRepo.save(reviewNameOne);
+
+		Review reviewNameTwo = new Review(null, "reviewNameTwo", tag);
+		reviewNameTwo = reviewRepo.save(reviewNameTwo);
+
+		entityManager.flush();
+		entityManager.clear();
+
+		tag = tagRepo.findOne(tagId);
+		assertThat(tag.getReviews(), containsInAnyOrder(reviewNameOne, reviewNameTwo));
+	}
+
 	// @Test
 	// public void shouldReturnReviewNameImageAndDescription() {
 	// Tag tag = tagRepo.save(new Tag("Ruby"));
