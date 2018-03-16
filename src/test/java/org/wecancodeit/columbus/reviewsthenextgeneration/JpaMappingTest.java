@@ -1,16 +1,20 @@
 package org.wecancodeit.columbus.reviewsthenextgeneration;
 
+import javax.annotation.Resource;
+
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @DataJpaTest
 public class JpaMappingTest {
 
-	// @Resource
-	// private TestEntityManager entityManager;
-	//
+	@Resource
+	private TestEntityManager entityManager;
+
 	// @Resource
 	// private ReviewRepository reviewRepo;
 	//
@@ -19,20 +23,20 @@ public class JpaMappingTest {
 	//
 	// @Resource
 	// private TagRepository tagRepo;
-	//
-	// @Test
-	// public void shouldSaveAndLoadReview() {
-	// Review review = new Review(null, "Review Name", "imageUrl", "Description");
-	// review = reviewRepo.save(review);
-	// long reviewId = review.getId();
-	//
-	// entityManager.flush();
-	// entityManager.clear();
-	//
-	// review = reviewRepo.findOne(reviewId);
-	// assertThat(review.getTitle(), is("Review Name"));
-	// }
-	//
+
+	@Test
+	public void shouldSaveAndLoadReview() {
+		Review review = new Review(null, "Review Name", "imageUrl", "Description");
+		review = reviewRepo.save(review);
+		long reviewId = review.getId();
+
+		entityManager.flush();
+		entityManager.clear();
+
+		review = reviewRepo.findOne(reviewId);
+		assertThat(review.getTitle(), is("Review Name"));
+	}
+
 	// @Test
 	// public void shouldSaveReviewToCategoryRelationship() {
 	// Category category = new Category("Anime");
