@@ -62,14 +62,14 @@ public class JpaMappingTest {
 
 	@Test
 	public void shouldSaveAndLoadTag() {
-		Tag tag = tagRepo.save(new Tag("Tag Name"));
+		Tag tag = tagRepo.save(new Tag("tagName"));
 		long tagId = tag.getId();
 
 		entityManager.flush();
 		entityManager.clear();
 
 		tag = tagRepo.findOne(tagId);
-		assertThat(tag.getName(), is("Tag Name"));
+		assertThat(tag.getTagName(), is("tagName"));
 	}
 
 	// @Test
