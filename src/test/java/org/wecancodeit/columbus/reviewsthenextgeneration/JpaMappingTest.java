@@ -46,10 +46,10 @@ public class JpaMappingTest {
 		categoryRepo.save(category);
 		long categoryId = category.getId();
 
-		Review first = new Review(category, "Review Name", "imageUrl", "Description");
+		Review first = new Review(category, "Title");
 		first = reviewRepo.save(first);
 
-		Review second = new Review(category, "Review Name", "imageUrl", "Description");
+		Review second = new Review(category, "Title");
 		second = reviewRepo.save(second);
 
 		entityManager.flush();
