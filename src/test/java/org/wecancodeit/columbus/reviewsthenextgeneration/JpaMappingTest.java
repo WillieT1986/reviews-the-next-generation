@@ -21,9 +21,9 @@ public class JpaMappingTest {
 	@Resource
 	private ReviewRepository reviewRepo;
 
-	// @Resource
-	// private CategoryRepository categoryRepo;
-	//
+	@Resource
+	private CategoryRepository categoryRepo;
+
 	// @Resource
 	// private TagRepository tagRepo;
 
@@ -40,27 +40,25 @@ public class JpaMappingTest {
 		assertThat(review.getTitle(), is("Title"));
 	}
 
-	// @Test
-	// public void shouldSaveReviewToCategoryRelationship() {
-	// Category category = new Category("Anime");
-	// categoryRepo.save(category);
-	// long categoryId = category.getId();
-	//
-	// Review first = new Review(category, "Review Name", "imageUrl",
-	// "Description");
-	// first = reviewRepo.save(first);
-	//
-	// Review second = new Review(category, "Review Name", "imageUrl",
-	// "Description");
-	// second = reviewRepo.save(second);
-	//
-	// entityManager.flush();
-	// entityManager.clear();
-	//
-	// category = categoryRepo.findOne(categoryId);
-	// assertThat(category.getReviews(), containsInAnyOrder(first, second));
-	// }
-	//
+	@Test
+	public void shouldSaveReviewToCategoryRelationship() {
+		Category category = new Category("Anime");
+		categoryRepo.save(category);
+		long categoryId = category.getId();
+
+		Review first = new Review(category, "Review Name", "imageUrl", "Description");
+		first = reviewRepo.save(first);
+
+		Review second = new Review(category, "Review Name", "imageUrl", "Description");
+		second = reviewRepo.save(second);
+
+		entityManager.flush();
+		entityManager.clear();
+
+		category = categoryRepo.findOne(categoryId);
+		assertThat(category.getReviews(), containsInAnyOrder(first, second));
+	}
+
 	// @Test
 	// public void shouldSaveAndLoadTag() {
 	// Tag tag = tagRepo.save(new Tag("Tag Name"));
