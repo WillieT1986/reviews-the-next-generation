@@ -15,14 +15,14 @@ public class JpaMappingTest {
 	@Resource
 	private TestEntityManager entityManager;
 
-	// @Resource
-	// private ReviewRepository reviewRepo;
-	//
-	// @Resource
-	// private CategoryRepository categoryRepo;
-	//
-	// @Resource
-	// private TagRepository tagRepo;
+	@Resource
+	private ReviewRepository reviewRepo;
+
+	@Resource
+	private CategoryRepository categoryRepo;
+
+	@Resource
+	private TagRepository tagRepo;
 
 	@Test
 	public void shouldSaveAndLoadReview() {
