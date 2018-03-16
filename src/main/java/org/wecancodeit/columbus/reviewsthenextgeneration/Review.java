@@ -58,4 +58,8 @@ public class Review {
 		}
 		return id == ((Review) obj).id;
 	}
+
+	public Object getTags() {
+		return null;
+	}
 }
