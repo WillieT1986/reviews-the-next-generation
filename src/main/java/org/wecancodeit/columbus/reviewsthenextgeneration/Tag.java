@@ -20,4 +20,8 @@ public class Tag {
 		return id;
 	}
 
+	public Object getName() {
+		return null;
+	}
+
 }
