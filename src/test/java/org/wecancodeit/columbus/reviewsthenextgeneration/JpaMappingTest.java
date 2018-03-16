@@ -25,8 +25,8 @@ public class JpaMappingTest {
 	@Resource
 	private CategoryRepository categoryRepo;
 
-	// @Resource
-	// private TagRepository tagRepo;
+	@Resource
+	private TagRepository tagRepo;
 
 	@Test
 	public void shouldSaveAndLoadReview() {
@@ -60,18 +60,18 @@ public class JpaMappingTest {
 		assertThat(category.getReviews(), containsInAnyOrder(first, second));
 	}
 
-	// @Test
-	// public void shouldSaveAndLoadTag() {
-	// Tag tag = tagRepo.save(new Tag("Tag Name"));
-	// long tagId = tag.getId();
-	//
-	// entityManager.flush();
-	// entityManager.clear();
-	//
-	// tag = tagRepo.findOne(tagId);
-	// assertThat(tag.getName(), is("Tag Name"));
-	// }
-	//
+	@Test
+	public void shouldSaveAndLoadTag() {
+		Tag tag = tagRepo.save(new Tag("Tag Name"));
+		long tagId = tag.getId();
+
+		entityManager.flush();
+		entityManager.clear();
+
+		tag = tagRepo.findOne(tagId);
+		assertThat(tag.getName(), is("Tag Name"));
+	}
+
 	// @Test
 	// public void shouldEstablishReviewToTagRelationships() {
 	// Tag java = tagRepo.save(new Tag("Java"));
