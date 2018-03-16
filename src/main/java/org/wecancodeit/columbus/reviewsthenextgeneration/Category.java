@@ -29,6 +29,10 @@ public class Category {
 		return id;
 	}
 
+	public String getCategoryName() {
+		return categoryName;
+	}
+
 	public Collection<Review> getReviews() {
 		return reviews;
 	}
