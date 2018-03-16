@@ -10,9 +10,14 @@ public class Review {
 	@Id
 	@GeneratedValue
 	private long id;
+	private String title;
 
 	public Review() {
 
+	}
+
+	public Review(String title) {
+		this.title = title;
 	}
 
 	public long getId() {

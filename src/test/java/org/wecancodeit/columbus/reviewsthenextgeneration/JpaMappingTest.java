@@ -1,5 +1,7 @@
 package org.wecancodeit.columbus.reviewsthenextgeneration;
 
+import static org.hamcrest.Matchers.is;
+
 import javax.annotation.Resource;
 
 import org.junit.Test;
@@ -26,7 +28,7 @@ public class JpaMappingTest {
 
 	@Test
 	public void shouldSaveAndLoadReview() {
-		Review review = new Review();
+		Review review = new Review("Title");
 		review = reviewRepo.save(review);
 		long reviewId = review.getId();
 
@@ -34,7 +36,7 @@ public class JpaMappingTest {
 		entityManager.clear();
 
 		review = reviewRepo.findOne(reviewId);
-		assertThat(review.getTitle(), is("Review Name"));
+		assertThat(review.getTitle(), is("Title"));
 	}
 
 	// @Test
