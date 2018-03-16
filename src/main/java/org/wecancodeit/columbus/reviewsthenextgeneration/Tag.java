@@ -1,8 +1,11 @@
 package org.wecancodeit.columbus.reviewsthenextgeneration;
 
+import java.util.Collection;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 
 @Entity
 public class Tag {
@@ -10,6 +13,10 @@ public class Tag {
 	@Id
 	@GeneratedValue
 	private long id;
+
+	@ManyToMany(mappedBy = "tags")
+	private Collection<Review> reviews;
+
 	private String tagName;
 
 	public Tag() {
