@@ -1,5 +1,6 @@
 package org.wecancodeit.columbus.reviewsthenextgeneration;
 
+import static org.hamcrest.Matchers.containsInAnyOrder;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 
@@ -29,7 +30,7 @@ public class JpaMappingTest {
 
 	@Test
 	public void shouldSaveAndLoadReview() {
-		Review review = new Review("Title");
+		Review review = new Review(null, "Title");
 		review = reviewRepo.save(review);
 		long reviewId = review.getId();
 
