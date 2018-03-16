@@ -9,4 +9,8 @@ public class Category {
 	public Category(String string) {
 	}
 
+	public long getId() {
+		return 0;
+	}
+
 }
