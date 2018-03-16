@@ -20,7 +20,7 @@ public class Tag {
 		return id;
 	}
 
-	public Object getName() {
+	public String getName() {
 		return null;
 	}
 
