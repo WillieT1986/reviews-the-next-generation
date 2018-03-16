@@ -41,16 +41,16 @@ public class Review {
 		this.tags = new HashSet<>(asList(tags));
 	}
 
+	public Collection<Tag> getTags() {
+		return tags;
+	}
+
 	public long getId() {
 		return id;
 	}
 
 	public String getTitle() {
 		return title;
-	}
-
-	public Collection<Tag> getTags() {
-		return tags;
 	}
 
 	public String getImageUrl() {
