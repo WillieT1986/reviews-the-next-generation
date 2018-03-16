@@ -13,18 +13,20 @@ public class Category {
 	@Id
 	@GeneratedValue
 	private long id;
+	private String categoryName;
 
 	@OneToMany(mappedBy = "category")
 	private Collection<Review> reviews;
 
-	private String categoryName;
-
 	public Category() {
-
 	}
 
 	public Category(String categoryName) {
 		this.categoryName = categoryName;
+	}
+
+	public Collection<Review> getReviews() {
+		return reviews;
 	}
 
 	public long getId() {
@@ -33,10 +35,6 @@ public class Category {
 
 	public String getCategoryName() {
 		return categoryName;
-	}
-
-	public Collection<Review> getReviews() {
-		return reviews;
 	}
 
 	@Override
