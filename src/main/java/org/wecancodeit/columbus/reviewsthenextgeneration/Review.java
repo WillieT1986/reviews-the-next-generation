@@ -22,6 +22,7 @@ public class Review {
 	}
 
 	public Review(Category category, String title) {
+		this.category = category;
 		this.title = title;
 	}
 
@@ -33,4 +34,19 @@ public class Review {
 		return title;
 	}
 
+	// @Override
+	// public int hashCode() {
+	// return ((Long) id).hashCode();
+	// }
+	//
+	// @Override
+	// public boolean equals(Object obj) {
+	// if (this == obj) {
+	// return true;
+	// }
+	// if (obj == null || getClass() != obj.getClass()) {
+	// return false;
+	// }
+	// return id == ((Review) obj).id;
+	// }
 }
