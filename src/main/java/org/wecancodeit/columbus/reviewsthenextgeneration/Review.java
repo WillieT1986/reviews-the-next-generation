@@ -25,13 +25,17 @@ public class Review {
 	private Collection<Tag> tags;
 
 	private String title;
+	private String imageUrl;
+	private String description;
 
 	public Review() {
 	}
 
-	public Review(Category category, String title, Tag... tags) {
+	public Review(Category category, String title, String imageUrl, String description, Tag... tags) {
 		this.category = category;
 		this.title = title;
+		this.imageUrl = imageUrl;
+		this.description = description;
 		this.tags = new HashSet<>(asList(tags));
 	}
 
@@ -48,11 +52,11 @@ public class Review {
 	}
 
 	public String getImageUrl() {
-		return null;
+		return imageUrl;
 	}
 
 	public String getDescription() {
-		return null;
+		return description;
 	}
 
 	@Override
