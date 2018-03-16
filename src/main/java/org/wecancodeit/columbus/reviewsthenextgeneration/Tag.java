@@ -35,6 +35,10 @@ public class Tag {
 		return tagName;
 	}
 
+	public Object getReviews() {
+		return reviews;
+	}
+
 	@Override
 	public int hashCode() {
 		return ((Long) id).hashCode();
@@ -50,9 +54,4 @@ public class Tag {
 		}
 		return id == ((Tag) obj).id;
 	}
-
-	public Object getReviews() {
-		return null;
-	}
-
 }
