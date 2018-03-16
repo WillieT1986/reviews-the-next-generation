@@ -35,7 +35,7 @@ public class Tag {
 		return tagName;
 	}
 
-	public Object getReviews() {
+	public Collection<Review> getReviews() {
 		return reviews;
 	}
 
