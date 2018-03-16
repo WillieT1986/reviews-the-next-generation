@@ -1,5 +1,7 @@
 package org.wecancodeit.columbus.reviewsthenextgeneration;
 
-public interface CategoryRepository {
+import org.springframework.data.repository.CrudRepository;
+
+public interface CategoryRepository extends CrudRepository<Category, Long> {
 
 }
