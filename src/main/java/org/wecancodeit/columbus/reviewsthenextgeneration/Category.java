@@ -14,6 +14,7 @@ public class Category {
 	}
 
 	public Category(String string) {
+
 	}
 
 	public long getId() {
