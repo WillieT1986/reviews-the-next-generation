@@ -16,7 +16,7 @@ public class Review {
 
 	}
 
-	public Review(String title) {
+	public Review(Category category, String title) {
 		this.title = title;
 	}
 
