@@ -31,7 +31,7 @@ public class JpaMappingTest {
 
 	@Test
 	public void shouldSaveAndLoadReview() {
-		Review review = new Review(null, "Title");
+		Review review = new Review(null, "Title", "imageUrl", "description");
 		review = reviewRepo.save(review);
 		long reviewId = review.getId();
 
@@ -48,10 +48,10 @@ public class JpaMappingTest {
 		categoryRepo.save(category);
 		long categoryId = category.getId();
 
-		Review first = new Review(category, "Title");
+		Review first = new Review(category, "Title", "imageUrl", "description");
 		first = reviewRepo.save(first);
 
-		Review second = new Review(category, "Title");
+		Review second = new Review(category, "Title", "imageUrl", "description");
 		second = reviewRepo.save(second);
 
 		entityManager.flush();
@@ -78,7 +78,7 @@ public class JpaMappingTest {
 		Tag java = tagRepo.save(new Tag("Java"));
 		Tag ruby = tagRepo.save(new Tag("Ruby"));
 
-		Review review = new Review(null, "Review Name", java, ruby);
+		Review review = new Review(null, "Title", "imageUrl", "description", java, ruby);
 		review = reviewRepo.save(review);
 		long reviewName = review.getId();
 
@@ -91,10 +91,10 @@ public class JpaMappingTest {
 		Tag tag = tagRepo.save(new Tag("Ruby"));
 		long tagId = tag.getId();
 
-		Review reviewNameOne = new Review(null, "reviewNameOne", tag);
+		Review reviewNameOne = new Review(null, "reviewNameOne", "imageUrl", "description", tag);
 		reviewNameOne = reviewRepo.save(reviewNameOne);
 
-		Review reviewNameTwo = new Review(null, "reviewNameTwo", tag);
+		Review reviewNameTwo = new Review(null, "reviewNameTwo", "imageUrl", "description", tag);
 		reviewNameTwo = reviewRepo.save(reviewNameTwo);
 
 		entityManager.flush();
