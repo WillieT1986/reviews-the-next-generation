@@ -60,6 +60,6 @@ public class Review {
 	}
 
 	public Object getTags() {
-		return null;
+		return tags;
 	}
 }
