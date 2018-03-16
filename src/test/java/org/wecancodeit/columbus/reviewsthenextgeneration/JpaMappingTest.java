@@ -72,20 +72,19 @@ public class JpaMappingTest {
 		assertThat(tag.getTagName(), is("tagName"));
 	}
 
-	// @Test
-	// public void shouldEstablishReviewToTagRelationships() {
-	// Tag java = tagRepo.save(new Tag("Java"));
-	// Tag ruby = tagRepo.save(new Tag("Ruby"));
-	//
-	// Review review = new Review(null, "Review Name", "imageUrl", "Description",
-	// java, ruby);
-	// review = reviewRepo.save(review);
-	// long reviewName = review.getId();
-	//
-	// review = reviewRepo.findOne(reviewName);
-	// assertThat(review.getTags(), containsInAnyOrder(java, ruby));
-	// }
-	//
+	@Test
+	public void shouldEstablishReviewToTagRelationships() {
+		Tag java = tagRepo.save(new Tag("Java"));
+		Tag ruby = tagRepo.save(new Tag("Ruby"));
+
+		Review review = new Review(null, "Review Name", java, ruby);
+		review = reviewRepo.save(review);
+		long reviewName = review.getId();
+
+		review = reviewRepo.findOne(reviewName);
+		assertThat(review.getTags(), containsInAnyOrder(java, ruby));
+	}
+
 	// @Test
 	// public void shouldEstablishTagToReviewsRelationship() {
 	// Tag tag = tagRepo.save(new Tag("Ruby"));
