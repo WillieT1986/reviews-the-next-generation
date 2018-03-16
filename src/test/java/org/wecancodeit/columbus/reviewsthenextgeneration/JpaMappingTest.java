@@ -1,6 +1,7 @@
 package org.wecancodeit.columbus.reviewsthenextgeneration;
 
 import static org.hamcrest.Matchers.is;
+import static org.junit.Assert.assertThat;
 
 import javax.annotation.Resource;
 
@@ -20,11 +21,11 @@ public class JpaMappingTest {
 	@Resource
 	private ReviewRepository reviewRepo;
 
-	@Resource
-	private CategoryRepository categoryRepo;
-
-	@Resource
-	private TagRepository tagRepo;
+	// @Resource
+	// private CategoryRepository categoryRepo;
+	//
+	// @Resource
+	// private TagRepository tagRepo;
 
 	@Test
 	public void shouldSaveAndLoadReview() {

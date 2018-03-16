@@ -24,4 +24,8 @@ public class Review {
 		return id;
 	}
 
+	public String getTitle() {
+		return title;
+	}
+
 }
