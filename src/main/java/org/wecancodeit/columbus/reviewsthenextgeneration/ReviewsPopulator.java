@@ -105,8 +105,8 @@ public class ReviewsPopulator implements CommandLineRunner {
 				"This story is about a boy named Kóinzell who's much older than he seems. Once know to be apart of a group of Hero's who ended up being betrayed. Kóinzell, seeks vengeance against the Hero's"
 						+ " who betrayed him and his comrades and made them out to be traitors. Kóinzell is not just an object of fear but also of hope to those around him.",
 				tag1, tag2, tag6, tag7, tag18));
-		reviewRepo.save(new Review(manga, "Arslan", "./images/image2.png", "Description2", tag1, tag2, tag5, tag7, tag9,
-				tag16, tag19));
+		reviewRepo.save(new Review(manga, "The Heroic Legend of Arslan", "./images/arslan.jpg", "Description2", tag1,
+				tag2, tag5, tag7, tag9, tag16, tag19));
 		reviewRepo.save(new Review(manga, "manga3", "./images/image3.png", "Description3", tag1));
 		// End of Manga Review
 	}
