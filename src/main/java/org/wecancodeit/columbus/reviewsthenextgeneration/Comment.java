@@ -36,4 +36,9 @@ public class Comment {
 	public Review getReview() {
 		return review;
 	}
+
+	@Override
+	public int hashCode() {
+		return ((Long) id).hashCode();
+	}
 }
