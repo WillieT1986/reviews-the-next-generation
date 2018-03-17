@@ -9,15 +9,15 @@
 	</header>
 	
 	<div th:each="tag: ${tags}">
-	<h2>
+	<p>
 		<a th:href="@{/tag(id=${tag.id})}" th:text="${tag.tagName}"></a>
-	</h2>
+	</p>
 	</div>
 	
 	<form method="POST">
 		<div>
-			<label>Enter Course Name:</label>
-			<!-- <input type="text" name="name" /> -->
+			<label>Enter Tag:</label>
+			<input type="text" name="name" />
 		</div>
 		<div>
 			<!-- <button th:formaction="@{/add-course}"> add course</button> -->
