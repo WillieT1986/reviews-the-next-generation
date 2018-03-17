@@ -8,17 +8,22 @@ import org.springframework.stereotype.Component;
 @Component
 public class ReviewsPopulator implements CommandLineRunner {
 
+	@Resource
+	private ReviewRepository reviewRepo;
+
+	@Resource
+	private CategoryRepository categoryRepo;
+
+	@Resource
+	private TagRepository tagRepo;
+
 	@Override
 	public void run(String... args) throws Exception {
 
-		@Resource
-		private ReviewRepository reviewRepo;
+	}
 
-		@Resource
-		private CategoryRepository categoryRepo;
-
-		@Resource
-		private TagRepository tagRepo;
-
+	private Category createCategory(String catName) {
+		Category c = new Category(catName);
+		return categoryRepo.save(c);
 	}
 }
