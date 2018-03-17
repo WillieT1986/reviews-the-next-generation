@@ -53,7 +53,7 @@ public class Review {
 		return tags;
 	}
 
-	public Collection<Comment> getComment() {
+	public Collection<Comment> getComments() {
 		return comments;
 	}
 
