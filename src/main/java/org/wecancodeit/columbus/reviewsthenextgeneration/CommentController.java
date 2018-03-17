@@ -9,4 +9,6 @@ public class CommentController {
 	@Resource
 	CommentRepository commentRepo;
 
+	@Resource
+	ReviewRepository reviewRepo;
 }
