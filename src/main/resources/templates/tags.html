@@ -10,8 +10,19 @@
 	
 	<div th:each="tag: ${tags}">
 	<h2>
-		<a th:href="@{/tag(id=${tag.id})}" th:text="${tag.name}"></a>
+		<a th:href="@{/tag(id=${tag.id})}" th:text="${tag.tagName}"></a>
 	</h2>
 	</div>
+	
+	<form method="POST">
+		<div>
+			<label>Enter Course Name:</label>
+			<!-- <input type="text" name="name" /> -->
+		</div>
+		<div>
+			<!-- <button th:formaction="@{/add-course}"> add course</button> -->
+			<button>Add Tag</button>
+		</div>
+	</form>
 </body>
 </html>
