@@ -100,7 +100,7 @@ public class ReviewsPopulator implements CommandLineRunner {
 		// End of Anime Review
 
 		// Start of Manga Review
-		reviewRepo.save(new Review(manga, "Übel Blatt", "./images/image1.png",
+		reviewRepo.save(new Review(manga, "Übel Blatt", "./images/ubel.jpg",
 				"This story is about a boy named Kóinzell who's much older than he seems. Once know to be apart of a group of Hero's who ended up being betrayed. Kóinzell, seeks vengeance against the Hero's"
 						+ " who betrayed him and his comrades and made them out to be traitors. Kóinzell is not just an object of fear but also of hope to those around him.",
 				tag1, tag2, tag6, tag7, tag18));
