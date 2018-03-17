@@ -5,7 +5,8 @@ import javax.persistence.Entity;
 @Entity
 public class Comment {
 
-	public Comment(String string) {
+	public Comment(String comment) {
+		this.comment = comment;
 	}
 
 }
