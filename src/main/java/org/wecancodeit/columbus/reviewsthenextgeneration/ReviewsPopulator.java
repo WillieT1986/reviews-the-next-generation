@@ -104,7 +104,7 @@ public class ReviewsPopulator implements CommandLineRunner {
 		reviewRepo.save(new Review(manga, "Übel Blatt", "./images/ubel.jpg",
 				"This story is about a boy named Kóinzell who's much older than he seems. Once know to be apart of a group of Hero's who ended up being betrayed. Kóinzell, seeks vengeance against the Hero's"
 						+ " who betrayed him and his comrades and made them out to be traitors. Kóinzell is not just an object of fear but also of hope to those around him.",
-				tag1, tag2, tag6, tag7, tag19));
+				tag1, tag2, tag6, tag7, tag18));
 		reviewRepo.save(new Review(manga, "The Heroic Legend of Arslan", "./images/arslan.jpg",
 				"Betrayed from within and overwhelmed by dark sorcery, the valiant armies of Pars are overrun by the warrior-fanatics of Lusitania. Escaping the destruction of his homeland, "
 						+ "the heroic Prince Arslan begins to assemble a group of five, extraordinary allies—a priestess, an exiled warrior, a mischievous minstrel, an insightful artist and his"
