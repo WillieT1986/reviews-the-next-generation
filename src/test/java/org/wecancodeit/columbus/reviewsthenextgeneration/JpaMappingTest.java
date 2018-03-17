@@ -29,6 +29,9 @@ public class JpaMappingTest {
 	@Resource
 	private TagRepository tagRepo;
 
+	@Resource
+	private CommentRepository commentRepo;
+
 	@Test
 	public void shouldSaveAndLoadReview() {
 		Review review = new Review(null, "Title", "imageUrl", "description");
@@ -116,5 +119,16 @@ public class JpaMappingTest {
 		assertEquals(check, "Title");
 		assertEquals(check2, "imageUrl");
 		assertEquals(check3, "Description");
+	}
+
+	@Test
+	public void shouldEstablishSaveCommentToReviewRelationship() {
+		Review review = new Review(null, "Title", "imageUrl", "Description");
+		reviewRepo.save(review);
+		long reviewId = review.getId();
+
+		Comment first = new Comment("Comment1");
+		first = commentRepo.save(first);
+
 	}
 }

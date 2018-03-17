@@ -38,7 +38,7 @@ public class CommentControllerTest {
 		underTest.findOneCourse(commentId, model);
 		verify(model).addAttribute("comments", comment1);
 	}
-	//
+
 	// @Test
 	// public void shouldReturnASingleCourse() {
 	// String template = underTest.findOneCourse(1L, model);
