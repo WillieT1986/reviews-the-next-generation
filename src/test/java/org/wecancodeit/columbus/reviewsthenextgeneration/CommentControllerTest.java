@@ -1,7 +1,9 @@
 package org.wecancodeit.columbus.reviewsthenextgeneration;
 
+import org.junit.Before;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 import org.springframework.ui.Model;
 
 public class CommentControllerTest {
@@ -23,11 +25,11 @@ public class CommentControllerTest {
 	@Mock
 	private Model model;
 
-	// @Before
-	// public void setup() {
-	// MockitoAnnotations.initMocks(this);
-	// }
-	//
+	@Before
+	public void setup() {
+		MockitoAnnotations.initMocks(this);
+	}
+
 	// @Test
 	// public void shouldAddASingleCourseToModel() {
 	// Long courseId = 1L;
