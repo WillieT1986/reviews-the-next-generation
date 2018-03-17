@@ -127,9 +127,9 @@ public class JpaMappingTest {
 		reviewRepo.save(review);
 		long reviewId = review.getId();
 
-		Comment first = new Comment("Comment1");
+		Comment first = new Comment("Comment1", review);
 		first = commentRepo.save(first);
-		Comment second = new Comment("Comment2");
+		Comment second = new Comment("Comment2", review);
 		second = commentRepo.save(second);
 
 		entityManager.flush();

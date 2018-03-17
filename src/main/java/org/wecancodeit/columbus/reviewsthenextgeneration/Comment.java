@@ -7,7 +7,7 @@ public class Comment {
 
 	private String comment;
 
-	public Comment(String comment) {
+	public Comment(String comment, Review review) {
 		this.comment = comment;
 	}
 

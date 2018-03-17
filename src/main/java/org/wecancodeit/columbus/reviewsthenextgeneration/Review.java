@@ -11,6 +11,7 @@ import javax.persistence.Id;
 import javax.persistence.Lob;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Review {
@@ -18,6 +19,9 @@ public class Review {
 	@Id
 	@GeneratedValue
 	private long id;
+
+	@OneToMany(mappedBy = "review")
+	private Collection<Comment> comments;
 
 	@ManyToOne
 	private Category category;
@@ -41,8 +45,16 @@ public class Review {
 		this.tags = new HashSet<>(asList(tags));
 	}
 
+	public Review(Comment... comments) {
+		this.comments = new HashSet<>(asList(comments));
+	}
+
 	public Collection<Tag> getTags() {
 		return tags;
+	}
+
+	public Collection<Comment> getComment() {
+		return comments;
 	}
 
 	public long getId() {
@@ -61,10 +73,6 @@ public class Review {
 		return description;
 	}
 
-	public Collection<Comment> getComment() {
-		return comments;
-	}
-
 	@Override
 	public int hashCode() {
 		return ((Long) id).hashCode();
@@ -80,5 +88,4 @@ public class Review {
 		}
 		return id == ((Review) obj).id;
 	}
-
 }
