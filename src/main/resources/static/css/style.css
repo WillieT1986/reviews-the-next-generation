@@ -1,0 +1,124 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+.container{
+	width:100%;
+	display: grid;
+	grid-template-rows: 40px auto 4rem;
+	height: 100vh;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: lightgray;
+	border-bottom: 1px solid black;
+}
+main{
+	background-color: lightblue;
+}
+
+/*categories.html beginning*/
+.categoriesLi {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.categoriesLi ul {
+	display: flex;
+	padding: 5px;
+	margin: 3px;
+}
+.categoriesLi li {
+	display: flex;
+	padding: 5px;
+	margin: 3px;
+}
+/*categoryies.html end*/
+
+/*category.html beginning*/
+.category-section-one {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+.category-section-one img {
+	display: flex;
+}
+.category-section-two {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center; 
+	margin: 10px;
+	padding-top: 20px;
+}
+.category-section-two ul {
+	display: flex;
+	flex-direction: column;
+}
+.category-section-two li {
+	display: flex;
+}
+/*category.html end*/
+
+/*review.html beginning*/
+.review-main {
+	display: flex;
+	justify-content: flex-start;
+	border-radius: 5px;
+	border: 1px solid black;
+}
+.review-main h2 {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;	
+}
+.review-main p {
+	padding: 5px;
+}
+.review-tags {
+	display: flex;
+	justify-content: space-between;
+}
+.review-photo {
+	display: block;
+	max-width: 685px;
+	max-height: 300px;
+	width: auto;
+	height: auto;
+	padding: 5px;
+}
+/*review.html end*/
+
+/*tag.html beginning*/
+.review-section-one {
+	display: flex;
+	justify-content: center;
+}
+.review-section-two {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.review-section-two ul {
+	display: flex;
+	justify-content: center;
+}
+.review-section-two li {
+	display: flex;
+}
+/*tag.html end*/
+
+footer {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	background-color: lightgray;
+	border-top: 1px solid black;
+}

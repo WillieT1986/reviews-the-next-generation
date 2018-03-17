@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Categories</title>
+	<link rel="stylesheet" type="text/css" href="./css/style.css" />
+</head>
+<body>
+	<div class="container">
+		<header>
+			<h1>Categories with Reviews</h1>
+		</header>
+		<main>
+			<section class="categoriesLi">
+				<article th:each="category: ${categories}">
+					<ul>
+						<li><h3><a th:href="@{/category(id=${category.id})}" th:text="${category.categoryName}"></a></h3></li>
+					</ul>
+				</article>
+			</section>
+		</main>
+		<footer>
+			<small>Weekend 9 Project</small>
+		</footer>
+	</div>
+</body>
+</html>
