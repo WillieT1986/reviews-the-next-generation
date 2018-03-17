@@ -61,8 +61,7 @@ public class Review {
 		return description;
 	}
 
-	public Object getComment() {
-		// TODO Auto-generated method stub
+	public Collection<Comment> getComment() {
 		return null;
 	}
 
