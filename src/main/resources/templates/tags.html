@@ -1,9 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html  xmlns:th="http://www.thymeleaf.org">
 <head>
-	<title></title>
+	<title>A List of Tags</title>
 </head>
 <body>
-
+	<header>
+		<h1>A List of Tags</h1>
+	</header>
+	
+	<div th:each="tag: ${tags}">
+	<h2>
+		<a th:href="@{/tag(id=${tag.id})}" th:text="${tag.name}"></a>
+	</h2>
+	</div>
 </body>
 </html>
