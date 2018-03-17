@@ -136,6 +136,6 @@ public class JpaMappingTest {
 		entityManager.clear();
 
 		review = reviewRepo.findOne(reviewId);
-		assertThat(review.getComment(), containsInAnyOrder(first, second));
+		assertThat(review.getComments(), containsInAnyOrder(first, second));
 	}
 }

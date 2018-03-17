@@ -45,9 +45,9 @@ public class Review {
 		this.tags = new HashSet<>(asList(tags));
 	}
 
-	public Review(Comment... comments) {
-		this.comments = new HashSet<>(asList(comments));
-	}
+	// public Review(Comment... comments) {
+	// this.comments = new HashSet<>(asList(comments));
+	// }
 
 	public Collection<Tag> getTags() {
 		return tags;
