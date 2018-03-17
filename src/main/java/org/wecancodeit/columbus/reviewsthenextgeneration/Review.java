@@ -61,6 +61,11 @@ public class Review {
 		return description;
 	}
 
+	public Object getComment() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 	@Override
 	public int hashCode() {
 		return ((Long) id).hashCode();
@@ -76,4 +81,5 @@ public class Review {
 		}
 		return id == ((Review) obj).id;
 	}
+
 }

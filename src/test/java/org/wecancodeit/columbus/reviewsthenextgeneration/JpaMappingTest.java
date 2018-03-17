@@ -129,6 +129,13 @@ public class JpaMappingTest {
 
 		Comment first = new Comment("Comment1");
 		first = commentRepo.save(first);
+		Comment second = new Comment("Comment2");
+		second = commentRepo.save(second);
 
+		entityManager.flush();
+		entityManager.clear();
+
+		review = reviewRepo.findOne(reviewId);
+		assertThat(review.getComment(), containsInAnyOrder(first, second));
 	}
 }
