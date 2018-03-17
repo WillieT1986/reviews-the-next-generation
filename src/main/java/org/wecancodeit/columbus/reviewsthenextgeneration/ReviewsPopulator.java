@@ -70,6 +70,13 @@ public class ReviewsPopulator implements CommandLineRunner {
 						+ " special team is being tasked with exploring the otherside of the Gate to make peace and to learn the ways of the otherside where he comes across a young mage,"
 						+ " demi-goddess, an elf and a princess to the other Kingdom. If failure, there will surely be more blood spilled.",
 				tag1, tag2, tag7, tag12));
+
+		reviewRepo.save(new Review(anime, "Log Horizon", "./images/log.jpg",
+				"Gamers, 30,000 to be more precise are somehow mysteriously trapped within a game called Elder Tails. They cannot die as they’re revived but at what cost? "
+						+ "A popular strategist within the game but an anti social in the real world, Shiroe does what he can to maintain order while trying to discover exactly what happened to"
+						+ " how not only himself but those trapped with him on how to escape back to the real world. Will Shiroe be able to do it or is there more to it and a reason for"
+						+ " these brave adventurers being trapped within Elder Tails?",
+				tag1, tag2, tag7, tag8, tag10));
 	}
 
 	private Category createCategory(String catName) {
