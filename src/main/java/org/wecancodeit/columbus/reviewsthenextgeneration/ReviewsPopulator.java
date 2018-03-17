@@ -3,7 +3,9 @@ package org.wecancodeit.columbus.reviewsthenextgeneration;
 import javax.annotation.Resource;
 
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
 
+@Component
 public class ReviewsPopulator implements CommandLineRunner {
 
 	@Override
