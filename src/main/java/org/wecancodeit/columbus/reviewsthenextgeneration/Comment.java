@@ -25,6 +25,10 @@ public class Comment {
 		this.review = review;
 	}
 
+	public long getId() {
+		return id;
+	}
+
 	public String getComment() {
 		return comment;
 	}
