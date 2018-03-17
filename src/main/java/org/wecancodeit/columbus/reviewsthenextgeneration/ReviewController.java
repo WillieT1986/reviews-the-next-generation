@@ -25,12 +25,12 @@ public class ReviewController {
 		return "reviews";
 	}
 
-	// @RequestMapping("review")
-	// public String getAReview(@RequestParam Long id, Model model) {
-	// model.addAttribute("review", reviewRepo.findOne(id));
-	// return "review";
-	// }
-	//
+	@RequestMapping("review")
+	public String getAReview(@RequestParam Long id, Model model) {
+		model.addAttribute("review", reviewRepo.findOne(id));
+		return "review";
+	}
+
 	// @RequestMapping(value = "categories")
 	// public String getAllCategories(Model model) {
 	// model.addAttribute("categories", categoryRepo.findAll());
