@@ -22,6 +22,7 @@ public class Comment {
 
 	public Comment(String comment, Review review) {
 		this.comment = comment;
+		this.review = review;
 	}
 
 	public String getComment() {
