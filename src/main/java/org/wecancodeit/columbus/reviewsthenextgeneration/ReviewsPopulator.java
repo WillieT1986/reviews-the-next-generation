@@ -27,4 +27,9 @@ public class ReviewsPopulator implements CommandLineRunner {
 		Category c = new Category(catName);
 		return categoryRepo.save(c);
 	}
+
+	private Tag createTag(String tagName) {
+		Tag t = new Tag(tagName);
+		return tagRepo.save(t);
+	}
 }
