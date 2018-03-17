@@ -31,12 +31,12 @@ public class ReviewController {
 		return "review";
 	}
 
-	// @RequestMapping(value = "categories")
-	// public String getAllCategories(Model model) {
-	// model.addAttribute("categories", categoryRepo.findAll());
-	// return "categories";
-	// }
-	//
+	@RequestMapping(value = "categories")
+	public String getAllCategories(Model model) {
+		model.addAttribute("categories", categoryRepo.findAll());
+		return "categories";
+	}
+
 	// @RequestMapping("category")
 	// public String getACategory(@RequestParam Long id, Model model) {
 	// model.addAttribute("category", categoryRepo.findOne(id));
