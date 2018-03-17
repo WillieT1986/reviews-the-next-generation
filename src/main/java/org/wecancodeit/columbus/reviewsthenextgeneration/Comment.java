@@ -16,6 +16,10 @@ public class Comment {
 	@ManyToOne
 	private Review review;
 
+	public Comment() {
+
+	}
+
 	public Comment(String comment, Review review) {
 		this.comment = comment;
 	}
