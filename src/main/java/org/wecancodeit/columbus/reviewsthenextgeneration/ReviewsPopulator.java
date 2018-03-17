@@ -111,10 +111,13 @@ public class ReviewsPopulator implements CommandLineRunner {
 				"Betrayed from within and overwhelmed by dark sorcery, the valiant armies of Pars are overrun by the warrior-fanatics of Lusitania. Escaping the destruction of his homeland, "
 						+ "the heroic Prince Arslan begins to assemble a group of five, extraordinary allies—a priestess, an exiled warrior, a mischievous minstrel, an insightful artist and his"
 						+ " attendant—to aid him in his fight against the Lusitanian invaders. Together, they must build an army and defeat 300,000 trained soldiers—including the mysterious Lord"
-						+ " Silver Mask—who has also laid claim to the throne of Pars. - Pulled from MyAnimeList.com that had the most simplist for this Manga",
+						+ " Silver Mask—who has also laid claim to the throne of Pars. -Pulled from MyAnimeList.com that had the most simplist for this Manga.",
 				tag1, tag2, tag5, tag7, tag9, tag16, tag21));
-		reviewRepo.save(new Review(manga, "BEATLESS-dystopia", "./images/beatless.jpg", "Description3", tag1, tag5,
-				tag16, tag18, tag20));
+		reviewRepo.save(new Review(manga, "BEATLESS-dystopia", "./images/beatless.jpg",
+				"I believe in that smile. Even if you don't have a soul. 2105 A.D. Japan, The humanoid android hiE became part of people's life and was handling the things human could and couldn't do."
+						+ " Endou Arato, unlike his friends Kenko and Ryou who hate hiE, felt sympathy for hiE which are supposed to be just objects. One night, Arato suddenly gets assaulted by mysterious falling"
+						+ " cherry blossoms that make hiE and machines run havoc. Will the cornered Arato be saved by the mysterious hiE Lacia... -Pulled from MyAnimeList.com that had a simple summary for this Manga.",
+				tag1, tag5, tag16, tag18, tag20));
 		// End of Manga Review
 	}
 
