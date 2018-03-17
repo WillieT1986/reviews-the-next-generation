@@ -20,7 +20,7 @@ public class ReviewsPopulator implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		Category anime = createCategory("Anime Reviews");
-		Category manga = createCategory("Mange Reviews");
+		Category manga = createCategory("Manga Reviews");
 
 		// Added when category anime was introduced
 		Tag tag1 = createTag("Action");
