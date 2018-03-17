@@ -15,6 +15,12 @@ public class CommentController {
 	@Resource
 	ReviewRepository reviewRepo;
 
+	@RequestMapping("/show-comments")
+	public String findAllComments(Model model) {
+		model.addAttribute("comments", commentRepo.findAll());
+		return "comments";
+	}
+
 	@RequestMapping("/comment")
 	public String findOneComment(@RequestParam(value = "id") Long id, Model model) {
 		model.addAttribute("comments", commentRepo.findOne(id));

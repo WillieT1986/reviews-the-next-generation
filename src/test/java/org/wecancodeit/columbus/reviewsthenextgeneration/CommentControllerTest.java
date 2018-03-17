@@ -5,6 +5,9 @@ import static org.junit.Assert.assertThat;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
+import java.util.Arrays;
+import java.util.Collection;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.InjectMocks;
@@ -50,12 +53,11 @@ public class CommentControllerTest {
 		assertThat(template, is("comment"));
 	}
 
-	// @Test
-	// public void shouldReturnAllCourses() {
-	// Collection<Course> allCourses = Arrays.asList(course1, course2);
-	// when(courseRepo.findAll()).thenReturn(allCourses);
-	// underTest.findAllCourses(model);
-	// verify(model).addAttribute("courses", allCourses);
-	// }
-
+	@Test
+	public void shouldReturnAllComments() {
+		Collection<Comment> allComments = Arrays.asList(comment1, comment2);
+		when(commentRepo.findAll()).thenReturn(allComments);
+		underTest.findAllComments(model);
+		verify(model).addAttribute("comments", allComments);
+	}
 }
