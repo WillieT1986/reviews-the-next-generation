@@ -111,7 +111,7 @@ public class ReviewsPopulator implements CommandLineRunner {
 						+ " attendant—to aid him in his fight against the Lusitanian invaders. Together, they must build an army and defeat 300,000 trained soldiers—including the mysterious Lord"
 						+ " Silver Mask—who has also laid claim to the throne of Pars. - Pulled from MyAnimeList.com that had the most simplist for this Manga",
 				tag1, tag2, tag5, tag7, tag9, tag16, tag19));
-		reviewRepo.save(new Review(manga, "manga3", "./images/image3.png", "Description3", tag1));
+		reviewRepo.save(new Review(manga, "BEATLESS-dystopia", "./images/image3.png", "Description3", tag1));
 		// End of Manga Review
 	}
 
