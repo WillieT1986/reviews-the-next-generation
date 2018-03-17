@@ -1,6 +1,7 @@
 package org.wecancodeit.columbus.reviewsthenextgeneration;
 
 import org.junit.Before;
+import org.junit.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
@@ -30,13 +31,13 @@ public class CommentControllerTest {
 		MockitoAnnotations.initMocks(this);
 	}
 
-	// @Test
-	// public void shouldAddASingleCourseToModel() {
-	// Long courseId = 1L;
-	// when(courseRepo.findOne(courseId)).thenReturn(course1);
-	// underTest.findOneCourse(courseId, model);
-	// verify(model).addAttribute("courses", course1);
-	// }
+	@Test
+	public void shouldAddASingleCommentToModel() {
+		Long commentId = 1L;
+		when(commentRepo.findOne(commentId)).thenReturn(comment1);
+		// underTest.findOneCourse(courseId, model);
+		// verify(model).addAttribute("courses", course1);
+	}
 	//
 	// @Test
 	// public void shouldReturnASingleCourse() {
