@@ -4,6 +4,7 @@ import javax.annotation.Resource;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
+import org.wecancodeit.columbus.reviewssitefullstack.Review;
 
 @Component
 public class ReviewsPopulator implements CommandLineRunner {
@@ -48,6 +49,13 @@ public class ReviewsPopulator implements CommandLineRunner {
 						+ " of the World.",
 				tag1, tag2, tag3, tag4, tag16, tag17));
 
+		reviewRepo.save(new Review(anime, "Fairy Tail (2014)", "./images/fairy.jpg",
+				"The #1 Wizard Guild isn’t only known for being Destructive but also known for their kindness and being humble towards the people. "
+						+ "They love a good fight as they go all out destroying their enemies more than what they need to. Natsu Dragneel along with the Ice Making "
+						+ "Wizard Gray Fullbuster have just devastated the Championship and as they draw nearer to victory. It is all abruptly ended by a "
+						+ "Dark Wizard in the shadows. A Gate the brings Dragons from the past lay waste to the lands as these two young Wizards along with their "
+						+ "Guild save the Kingdom from complete annihilation.",
+				tag1, tag2, tag3, tag7, tag10, tag16));
 	}
 
 	private Category createCategory(String catName) {
