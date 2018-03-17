@@ -62,7 +62,7 @@ public class Review {
 	}
 
 	public Collection<Comment> getComment() {
-		return null;
+		return comments;
 	}
 
 	@Override
