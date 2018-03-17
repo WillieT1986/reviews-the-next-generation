@@ -32,4 +32,8 @@ public class Comment {
 	public String getComment() {
 		return comment;
 	}
+
+	public Review getReview() {
+		return review;
+	}
 }
