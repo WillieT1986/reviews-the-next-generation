@@ -37,12 +37,12 @@ public class ReviewController {
 		return "categories";
 	}
 
-	// @RequestMapping("category")
-	// public String getACategory(@RequestParam Long id, Model model) {
-	// model.addAttribute("category", categoryRepo.findOne(id));
-	// return "category";
-	// }
-	//
+	@RequestMapping("category")
+	public String getACategory(@RequestParam Long id, Model model) {
+		model.addAttribute("category", categoryRepo.findOne(id));
+		return "category";
+	}
+
 	// @RequestMapping(value = "tags")
 	// public String getAllTags(Model model) {
 	// model.addAttribute("tags", tagRepo.findAll());
