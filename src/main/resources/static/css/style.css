@@ -82,10 +82,18 @@ main{
 .review-main p {
 	padding: 5px;
 }
+
+.review-main button {
+	display: flex;
+	align-self: center;
+
+}
+
 .review-tags {
 	display: flex;
 	justify-content: space-between;
 }
+
 .review-photo {
 	display: block;
 	max-width: 685px;

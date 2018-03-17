@@ -18,6 +18,7 @@
 					<h2>Description</h2>
 					<p th:text="${review.description}"></p>
 					<p class="review-tags"><small>Tags:  <a th:each="tag: ${review.tags}"	th:href="@{/tag(id=${tag.id})}" th:text="${tag}" ></a></small></p>
+					<button>Remove Tag</button>
 				</article>
 			</section>
 		</main>
