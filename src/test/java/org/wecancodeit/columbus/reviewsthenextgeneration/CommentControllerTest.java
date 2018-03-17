@@ -1,5 +1,7 @@
 package org.wecancodeit.columbus.reviewsthenextgeneration;
 
+import static org.hamcrest.Matchers.is;
+import static org.junit.Assert.assertThat;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
@@ -42,12 +44,12 @@ public class CommentControllerTest {
 		verify(model).addAttribute("comments", comment1);
 	}
 
-	// @Test
-	// public void shouldReturnASingleComment() {
-	// String template = underTest.findOneCourse(1L, model);
-	// assertThat(template, is("course"));
-	// }
-	//
+	@Test
+	public void shouldReturnASingleComment() {
+		String template = underTest.findOneComment(1L, model);
+		assertThat(template, is("comment"));
+	}
+
 	// @Test
 	// public void shouldReturnAllCourses() {
 	// Collection<Course> allCourses = Arrays.asList(course1, course2);
