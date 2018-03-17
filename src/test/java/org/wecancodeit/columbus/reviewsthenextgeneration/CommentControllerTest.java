@@ -35,8 +35,8 @@ public class CommentControllerTest {
 	public void shouldAddASingleCommentToModel() {
 		Long commentId = 1L;
 		when(commentRepo.findOne(commentId)).thenReturn(comment1);
-		// underTest.findOneCourse(courseId, model);
-		// verify(model).addAttribute("courses", course1);
+		underTest.findOneCourse(commentId, model);
+		verify(model).addAttribute("comments", comment1);
 	}
 	//
 	// @Test
