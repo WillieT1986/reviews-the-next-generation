@@ -115,7 +115,7 @@ public class ReviewsPopulator implements CommandLineRunner {
 				"I believe in that smile. Even if you don't have a soul. 2105 A.D. Japan, The humanoid android hiE became part of people's life and was handling the things human could and couldn't do."
 						+ " Endou Arato, unlike his friends Kenko and Ryou who hate hiE, felt sympathy for hiE which are supposed to be just objects. One night, Arato suddenly gets assaulted by mysterious falling"
 						+ " cherry blossoms that make hiE and machines run havoc. Will the cornered Arato be saved by the mysterious hiE Lacia... -Pulled from MyAnimeList.com that had a simple summary for this Manga.",
-				tag1, tag5, tag16, tag18, tag20));
+				tag1, tag5, tag13, tag18, tag19));
 		// End of Manga Review
 	}
 
