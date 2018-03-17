@@ -43,7 +43,7 @@ public class CommentControllerTest {
 	}
 
 	// @Test
-	// public void shouldReturnASingleCourse() {
+	// public void shouldReturnASingleComment() {
 	// String template = underTest.findOneCourse(1L, model);
 	// assertThat(template, is("course"));
 	// }
