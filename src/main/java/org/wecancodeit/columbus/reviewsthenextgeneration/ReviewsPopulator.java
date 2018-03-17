@@ -19,7 +19,7 @@ public class ReviewsPopulator implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-
+		Category anime = createCategory("Anime Reviews");
 	}
 
 	private Category createCategory(String catName) {
