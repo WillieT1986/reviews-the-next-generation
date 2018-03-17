@@ -40,12 +40,10 @@ public class ReviewsPopulator implements CommandLineRunner {
 		Tag tag15 = createTag("School");
 		Tag tag16 = createTag("Shounen");
 		Tag tag17 = createTag("Super Powers");
-
 		// Added when category manga was introduced
-		Tag tag18 = createTag("Romance");
-		Tag tag19 = createTag("Seinen");
-		Tag tag20 = createTag("Sci-Fi");
-		Tag tag21 = createTag("Supernatural");
+		Tag tag18 = createTag("Seinen");
+		Tag tag19 = createTag("Sci-Fi");
+		Tag tag20 = createTag("Supernatural");
 
 		// Start of Anime Review
 		reviewRepo.save(new Review(anime, "D.Gray-man", "./images/dman.jpg",
