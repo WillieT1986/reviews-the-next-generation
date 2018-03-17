@@ -1,5 +1,6 @@
 package org.wecancodeit.columbus.reviewsthenextgeneration;
 
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
@@ -8,8 +9,8 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @DataJpaTest
 public class JpaWiringTest {
 
-	// @Test
-	// public void shouldSuccessfullyInitializeJpa() {
-	// }
+	@Test
+	public void shouldSuccessfullyInitializeJpa() {
+	}
 
 }
