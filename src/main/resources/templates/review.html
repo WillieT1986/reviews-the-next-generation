@@ -20,6 +20,22 @@
 					<p class="review-tags"><small>Tags:  <a th:each="tag: ${review.tags}"	th:href="@{/tag(id=${tag.id})}" th:text="${tag}" ></a></small></p>
 				</article>
 			</section>
+			<section>
+				<article>
+					<form method="POST">
+						<div id="add-comment">
+							<label>Add A Comment:</label>
+							<input type="text" name="titleName2" />
+						</div>
+						<div>
+							<!-- <button th:formaction="@{/del-review}">Remove Review</button> -->
+							<button>Remove Review</button>
+						</div>
+						
+					</form>
+				</article>
+			</section>
+
 		</main>
 		<footer>
 			<section>
