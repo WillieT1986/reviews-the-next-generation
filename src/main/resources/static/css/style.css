@@ -125,7 +125,9 @@ main{
 /*tag.html end*/
 
 /*tags.html start*/
-
+.review-tags {
+	width: 50%;
+}
 /*tags.html end*/
 
 footer {
