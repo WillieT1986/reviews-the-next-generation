@@ -31,6 +31,11 @@
 							<button type="submit" th:formaction="@{/add-comment}">Add A Comment</button>
 						</div>
 					</form>
+					<ul th:each="comment: ${review.comments}">
+						<li th:text="'Comment: ' + ${comment.comment}"></li>
+					</ul>
+
+
 				</article>
 			</section>
 
