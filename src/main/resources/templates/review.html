@@ -21,8 +21,8 @@
 						<p class="review-tags"><small>Tags:  <a th:each="tag: ${review.tags}"	th:href="@{/tag(id=${tag.id})}" th:text="${tag}" ></a></small></p>
 					</article>
 				</section>
+
 				<section>
-					<article>
 						<form method="POST">
 							<div id="add-comment">
 								<label>Add A Comment:</label>
@@ -41,9 +41,6 @@
 						<ul th:each="comment: ${review.comments}">
 							<li th:text="'Comment: ' + ${comment.comment}"></li>
 						</ul>
-
-
-					</article>
 				</section>
 
 			</main>
