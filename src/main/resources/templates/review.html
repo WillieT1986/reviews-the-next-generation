@@ -9,8 +9,9 @@
 		<header>
 			<h1 th:text="${review.title}"></h1>
 		</header>
-		<div class="review" th:each="review: ${review}">
-			<main>
+
+		<main>
+			<div class="review" th:each="review: ${review}">
 				<section class="review-main">
 					<article class="review-photo" th:each="reviews: ${review}">
 						<img th:src="${review.imageUrl}" />
@@ -44,9 +45,9 @@
 						</ul>
 					</article>
 				</section>
+			</div>
+		</main>
 
-			</main>
-		</div>
 		<footer>
 			<section>
 				<h4><a href="http://localhost:8080/categories">Back to Home</a></h4>
