@@ -27,10 +27,16 @@
 							<label>Add A Comment:</label>
 							<input type="text" name="comment" />
 						</div>
+
+						<!-- <div>
+							<input name="id" type="hidden" th:value="${review.id}" />
+						</div> -->
+
 						<div>
 							<button type="submit" th:formaction="@{/add-comment}">Add A Comment</button>
 						</div>
 					</form>
+
 					<ul th:each="comment: ${review.comments}">
 						<li th:text="'Comment: ' + ${comment.comment}"></li>
 					</ul>
