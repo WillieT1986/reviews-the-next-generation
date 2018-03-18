@@ -28,15 +28,15 @@ public class CommentController {
 		return "comment";
 	}
 
-	@RequestMapping("/add-comment")
-	public String addComment(String name, String reviewTitle) {
-		Review review = reviewRepo.findByName(reviewTitle);
-
-		Comment newComment = commentRepo.findByName(name);
-		if (newComment == null) {
-			newComment = new Comment(name, review);
-			commentRepo.save(newComment);
-		}
-		return "redirect:/show-comments";
-	}
+	// @RequestMapping("/add-comment")
+	// public String addComment(String name, String reviewTitle) {
+	// Review review = reviewRepo.findByName(reviewTitle);
+	//
+	// Comment newComment = commentRepo.findByName(name);
+	// if (newComment == null) {
+	// newComment = new Comment(name, review);
+	// commentRepo.save(newComment);
+	// }
+	// return "redirect:/show-comments";
+	// }
 }
