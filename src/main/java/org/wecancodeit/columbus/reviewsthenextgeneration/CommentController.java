@@ -30,9 +30,9 @@ public class CommentController {
 
 	@RequestMapping("/add-comment")
 	public String addComment(String comment, String reviewTitle) {
-		Review review = reviewRepo.findByName(reviewTitle);
+		Review review = reviewRepo.findByTitle(reviewTitle);
 
-		Comment newComment = commentRepo.findByName(comment);
+		Comment newComment = commentRepo.findByComment(comment);
 		if (newComment == null) {
 			newComment = new Comment(comment, review);
 			commentRepo.save(newComment);
