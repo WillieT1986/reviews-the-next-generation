@@ -29,14 +29,14 @@ public class CommentController {
 	}
 
 	@RequestMapping("/add-comment")
-	public String addComment(String comment, Long reviewTitle) {
-		Review review = reviewRepo.findByTitle(reviewTitle);
+	public String addComment(String comment, Long id) {
+		Review review = reviewRepo.findOne(id);
 
 		Comment newComment = commentRepo.findByComment(comment);
 		if (newComment == null) {
 			newComment = new Comment(comment, review);
 			commentRepo.save(newComment);
 		}
-		return "redirect:/show-review?id=\" + id";
+		return "redirect:/show-review?id= " + id;
 	}
 }
