@@ -9,7 +9,6 @@
 		<header>
 			<h1 th:text="${review.title}"></h1>
 		</header>
-
 		<main>
 			<div class="review" th:each="review: ${review}">
 				<section class="review-main">
@@ -22,7 +21,6 @@
 						<p class="review-tags"><small>Tags:  <a th:each="tag: ${review.tags}"	th:href="@{/tag(id=${tag.id})}" th:text="${tag}" ></a></small></p>
 					</article>
 				</section>
-
 				<section>
 					<article>
 						<form method="POST">
@@ -30,16 +28,13 @@
 								<label>Add A Comment:</label>
 								<input type="text" name="comment" />
 							</div>
-
 							<div>
 								<input name="id" type="hidden" th:value="${review.id}" />
 							</div>
-
 							<div>
 								<button type="submit" th:formaction="@{/add-comment}">Add A Comment</button>
 							</div>
 						</form>
-
 						<ul th:each="comment: ${review.comments}">
 							<li th:text="'Comment: ' + ${comment.comment}"></li>
 						</ul>
@@ -47,7 +42,6 @@
 				</section>
 			</div>
 		</main>
-
 		<footer>
 			<section>
 				<h4><a href="http://localhost:8080/categories">Back to Home</a></h4>
