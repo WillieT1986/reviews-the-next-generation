@@ -19,11 +19,29 @@
 				<form method="POST">
 					<div>
 						<label>Enter Tag:</label>
-						<input type="text" name="tag" />
+						<input type="text" name="AddTag" />
 					</div>
 					<div>
-						<!-- <button th:formaction="@{/add-course}"> add course</button> -->
+						<!-- <button th:formaction="@{/add-tag}">Add Tag</button> -->
 						<button>Add Tag</button>
+					</div>
+				</form>
+
+				<form method="POST">
+					<div>
+						<label>Enter Tag:</label>
+						<input type="text" name="removeTag" />
+					</div>
+					<div>
+						<!-- <button th:formaction="@{/del-tag}">Remove Tag</button> -->
+						<button>Remove Tag</button>
+					</div>
+				</form>
+
+				<form method="GET">
+					<div>
+						<!-- <button th:formaction="@{/sort-tags}">Sort Tags</button> -->
+						<button>Sort Tags</button>
 					</div>
 				</form>
 			</section>
