@@ -37,6 +37,6 @@ public class CommentController {
 			newComment = new Comment(comment, review);
 			commentRepo.save(newComment);
 		}
-		return "redirect:/show-comments";
+		return "redirect:/show-reviewTitle";
 	}
 }
