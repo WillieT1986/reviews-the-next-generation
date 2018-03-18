@@ -29,7 +29,7 @@ public class CommentController {
 	}
 
 	@RequestMapping("/add-comment")
-	public String addComment(String comment, String reviewTitle) {
+	public String addComment(String comment, Long reviewTitle) {
 		Review review = reviewRepo.findByTitle(reviewTitle);
 
 		Comment newComment = commentRepo.findByComment(comment);
@@ -37,6 +37,6 @@ public class CommentController {
 			newComment = new Comment(comment, review);
 			commentRepo.save(newComment);
 		}
-		return "redirect:/show-reviewTitle";
+		return "redirect:/show-review?id=\" + id";
 	}
 }
