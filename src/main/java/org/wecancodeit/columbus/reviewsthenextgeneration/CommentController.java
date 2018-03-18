@@ -28,6 +28,12 @@ public class CommentController {
 		return "comment";
 	}
 
+	@RequestMapping("review")
+	public String getAReview(@RequestParam Long id, Model model) {
+		model.addAttribute("review", reviewRepo.findOne(id));
+		return "review";
+	}
+
 	@RequestMapping("/add-comment")
 	public String addComment(String comment, Long id) {
 		Review review = reviewRepo.findOne(id);
