@@ -23,6 +23,7 @@
 				</section>
 
 				<section>
+					<article>
 						<form method="POST">
 							<div id="add-comment">
 								<label>Add A Comment:</label>
@@ -41,6 +42,7 @@
 						<ul th:each="comment: ${review.comments}">
 							<li th:text="'Comment: ' + ${comment.comment}"></li>
 						</ul>
+					</article>
 				</section>
 
 			</main>
