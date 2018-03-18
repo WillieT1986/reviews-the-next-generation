@@ -31,10 +31,9 @@ public class CommentController {
 	@RequestMapping("/add-comment")
 	public String addComment(String comment, Long id) {
 		Review review = reviewRepo.findOne(id);
-		Comment newComment = commentRepo.findByComment(comment);
-
-		newComment = new Comment(comment, review);
+		Comment newComment = new Comment(comment, review);
 		commentRepo.save(newComment);
+
 		return "redirect:/show-review?id= " + id;
 	}
 }
