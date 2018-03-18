@@ -126,7 +126,10 @@ main{
 
 /*tags.html start*/
 .review-tags {
-	width: 50%;
+	width: 75%;
+	margin: 1rem;
+	padding-bottom: 1rem;
+
 }
 /*tags.html end*/
 

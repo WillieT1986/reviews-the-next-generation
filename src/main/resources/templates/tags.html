@@ -11,8 +11,8 @@
 		</header>
 
 		<main>
-			<section>
-				<p class="review-tags"><STRONG>Tags:  <a th:each="tag: ${tags}"	th:href="@{/tag(id=${tag.id})}" th:text="${tag}" ></a></STRONG></p>
+			<section  class="review-tags">
+				<p><STRONG>Tags:  <a th:each="tag: ${tags}"	th:href="@{/tag(id=${tag.id})}" th:text="${tag}" ></a></STRONG></p>
 			</section>
 
 			<section>
