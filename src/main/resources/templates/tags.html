@@ -8,7 +8,6 @@
 	<div class="container">
 		<header>
 			<h1>A List of Tags</h1>
-			<input type="hidden" id="tag-id" th:value="${tag.id}" />
 		</header>
 
 		<main>
@@ -23,8 +22,7 @@
 						<input type="text" name="AddTag" />
 					</div>
 					<div>
-						<input type="button" class="add-tag" value="Add Tag"></input>
-						<!-- <button>Add Tag</button> (If I can use ajax then delete if not then keep)-->
+						<button>Add Tag</button>
 					</div>
 				</form>
 
@@ -34,14 +32,12 @@
 						<input type="text" name="removeTag" />
 					</div>
 					<div>
-						<!-- <button th:formaction="@{/del-tag}">Remove Tag</button> -->
 						<button>Remove Tag</button>
 					</div>
 				</form>
 
 				<form method="GET">
 					<div>
-						<!-- <button th:formaction="@{/sort-tags}">Sort Tags</button> -->
 						<button>Sort Tags</button>
 					</div>
 				</form>
@@ -58,5 +54,4 @@
 		</footer>
 	</div>
 </body>
-<script src="./js/app.js"></script>
 </html>
