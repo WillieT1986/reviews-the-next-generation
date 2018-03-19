@@ -25,10 +25,10 @@ public class TagRestController {
 		}
 		String result = tag.addTag(tag1);
 		tagRepo.save(tag);
-		if(result.equals("added")) {
+		if (result.equals("added")) {
 			return tag1;
 		} else {
-			retun null;
+			return null;
 		}
 	}
 
