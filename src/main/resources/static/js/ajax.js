@@ -5,7 +5,7 @@ addTag.addEventListener('click', function() {
 	const addTagInput = document.querySelector('addTag')
 	const addTag = addTagInput.value
 
-	if () {
+	if (addTag) {
 		
 	}
 
