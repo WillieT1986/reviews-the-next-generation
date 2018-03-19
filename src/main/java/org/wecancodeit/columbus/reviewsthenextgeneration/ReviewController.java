@@ -54,4 +54,12 @@ public class ReviewController {
 		model.addAttribute("tag", tagRepo.findOne(id));
 		return "tag";
 	}
+
+	@RequestMapping("/add-tag")
+	public String addTag(String tag) {
+		Tag newTag = new Tag(tag);
+		tagRepo.save(newTag);
+
+		return "redirect:/tags";
+	}
 }
