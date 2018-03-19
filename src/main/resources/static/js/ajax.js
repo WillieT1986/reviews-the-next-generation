@@ -7,6 +7,8 @@ addTag.addEventListener('click', function() {
 
 	if (addTag) {
 		addTagInput.value = ''
+
+		const addRequestUrl = 'http://localhost:8080/review/' + 
 	}
 
 
