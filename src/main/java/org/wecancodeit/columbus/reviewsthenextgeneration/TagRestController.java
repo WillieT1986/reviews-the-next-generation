@@ -21,7 +21,7 @@ public class TagRestController {
 
 		if (tag1 == null) {
 			tag1 = new Tag(tagName);
-			tag1.save(tag1);
+			tagRepo.save(tag1);
 		}
 		String result = tag.addTag(tag1);
 		tagRepo.save(tag);
