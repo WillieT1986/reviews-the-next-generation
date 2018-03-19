@@ -11,38 +11,41 @@
 		</header>
 
 		<main>
-			<section  class="review-tags">
-				<p><STRONG>Tags:  <a th:each="tag: ${tags}"	th:href="@{/tag(id=${tag.id})}" th:text="${tag}" ></a></STRONG></p>
-			</section>
+				<section  class="review-tags">
+					<p><STRONG>Tags:  <a th:each="tag: ${tags}"	th:href="@{/tag(id=${tag.id})}" th:text="${tag}" ></a></STRONG></p>
+				</section>
+			<div class="tag" th:each="tags: ${tags}">
+				<section>
+					<form method="POST">
+						<div id="add-tag">
+							<label>Enter Tag:</label>
+							<input type="text" name="AddTag" />
+						</div>
+						<div>
+							<input name="id" type="hidden" th:value="${tags}" />
+						</div>
+						<div>
+							<button type="submit" th:formaction="@{/add-tag}">Add Tag</button>
+						</div>
+					</form>
 
-			<section>
-				<form method="POST">
-					<div>
-						<label>Enter Tag:</label>
-						<input type="text" name="AddTag" />
-					</div>
-					<div>
-						<button>Add Tag</button>
-					</div>
-				</form>
+					<form method="POST">
+						<div>
+							<label>Enter Tag:</label>
+							<input type="text" name="removeTag" />
+						</div>
+						<div>
+							<button>Remove Tag</button>
+						</div>
+					</form>
 
-				<form method="POST">
-					<div>
-						<label>Enter Tag:</label>
-						<input type="text" name="removeTag" />
-					</div>
-					<div>
-						<button>Remove Tag</button>
-					</div>
-				</form>
-
-				<form method="GET">
-					<div>
-						<button>Sort Tags</button>
-					</div>
-				</form>
-			</section>
-
+					<form method="GET">
+						<div>
+							<button>Sort Tags</button>
+						</div>
+					</form>
+				</section>
+			</div>
 		</main>
 
 		<footer>

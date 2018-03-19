@@ -14,6 +14,7 @@ public class Tag {
 	@GeneratedValue
 	private long id;
 	private String tagName;
+	private Review review;
 
 	@ManyToMany(mappedBy = "tags")
 	private Collection<Review> reviews;
@@ -21,8 +22,9 @@ public class Tag {
 	public Tag() {
 	}
 
-	public Tag(String tagName) {
+	public Tag(String tagName, Review review) {
 		this.tagName = tagName;
+		this.review = review;
 	}
 
 	public long getId() {
@@ -35,6 +37,10 @@ public class Tag {
 
 	public Collection<Review> getReviews() {
 		return reviews;
+	}
+
+	public Review getReview() {
+		return review;
 	}
 
 	@Override

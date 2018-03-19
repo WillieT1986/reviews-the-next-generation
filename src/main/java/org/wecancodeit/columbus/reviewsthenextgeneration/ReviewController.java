@@ -56,8 +56,9 @@ public class ReviewController {
 	}
 
 	@RequestMapping("/add-tag")
-	public String addTag(String tag) {
-		Tag newTag = new Tag(tag);
+	public String addTag(String tag, Long id) {
+		Review review = reviewRepo.findOne(id);
+		Tag newTag = new Tag(tag, review);
 		tagRepo.save(newTag);
 
 		return "redirect:/tags";
