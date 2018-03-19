@@ -33,7 +33,6 @@ public class CommentController {
 		Review review = reviewRepo.findOne(id);
 		Comment newComment = new Comment(comment, review);
 		commentRepo.save(newComment);
-
 		return "redirect:/review?id=" + id;
 	}
 }
