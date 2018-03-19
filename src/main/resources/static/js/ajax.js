@@ -1,3 +1,5 @@
+const tadIdElement = document.querySelector('#tag-id')
+
 //Add Tag
 const addTag = document.querySelector('.add-tag')
 
