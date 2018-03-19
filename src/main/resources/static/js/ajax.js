@@ -1,4 +1,5 @@
 const tadIdElement = document.querySelector('#tag-id')
+const currentTagId = tadIdElement.value
 
 //Add Tag
 const addTag = document.querySelector('.add-tag')
@@ -10,7 +11,7 @@ addTag.addEventListener('click', function() {
 	if (addTag) {
 		addTagInput.value = ''
 
-		const addRequestUrl = 'http://localhost:8080/review/' + 
+		const addRequestUrl = 'http://localhost:8080/review/' + currentTagId + '//' + addTag
 	}
 
 
