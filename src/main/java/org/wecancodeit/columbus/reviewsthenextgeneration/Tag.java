@@ -21,6 +21,8 @@ public class Tag {
 	@ManyToMany(mappedBy = "tags")
 	private Collection<Review> reviews;
 
+	private Collection<Tag> tags;
+
 	public Tag() {
 	}
 
@@ -38,6 +40,15 @@ public class Tag {
 
 	public Collection<Review> getReviews() {
 		return reviews;
+	}
+
+	public String addTag(Tag tag) {
+		if (!(tags.contains(tag))) {
+			tags.add(tag);
+			return "added";
+		} else {
+			return "duplicate";
+		}
 	}
 
 	@Override
