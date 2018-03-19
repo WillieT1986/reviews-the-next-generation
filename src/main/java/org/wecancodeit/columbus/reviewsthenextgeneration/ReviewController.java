@@ -4,7 +4,6 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -55,11 +54,4 @@ public class ReviewController {
 		model.addAttribute("tag", tagRepo.findOne(id));
 		return "tag";
 	}
-
-	@RequestMapping("/tag/{id}")
-	public String showTag(@PathVariable Long id, Model model) {
-		model.addAttribute("currentTagId", tagRepo.findOne(id));
-		return "tag";
-	}
-
 }
