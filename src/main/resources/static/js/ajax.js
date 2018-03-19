@@ -6,7 +6,7 @@ addTag.addEventListener('click', function() {
 	const addTag = addTagInput.value
 
 	if (addTag) {
-		
+		addTagInput.value = ''
 	}
 
 
