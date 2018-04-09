@@ -17,6 +17,16 @@ public class ReviewsPopulator implements CommandLineRunner {
 	@Resource
 	private TagRepository tagRepo;
 
+	private Category createCategory(String catName) {
+		Category c = new Category(catName);
+		return categoryRepo.save(c);
+	}
+
+	private Tag createTag(String tagName) {
+		Tag t = new Tag(tagName);
+		return tagRepo.save(t);
+	}
+
 	@Override
 	public void run(String... args) throws Exception {
 		Category anime = createCategory("Anime Reviews");
@@ -117,15 +127,5 @@ public class ReviewsPopulator implements CommandLineRunner {
 						+ " cherry blossoms that make hiE and machines run havoc. Will the cornered Arato be saved by the mysterious hiE Lacia... -Pulled from MyAnimeList.com that had a simple summary for this Manga.",
 				tag1, tag5, tag13, tag16, tag19));
 		// End of Manga Review
-	}
-
-	private Category createCategory(String catName) {
-		Category c = new Category(catName);
-		return categoryRepo.save(c);
-	}
-
-	private Tag createTag(String tagName) {
-		Tag t = new Tag(tagName);
-		return tagRepo.save(t);
 	}
 }
